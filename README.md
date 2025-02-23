@@ -25,15 +25,15 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 
 # Tecnologias usadas no backend.
 
-bcryptjs: 3.0.2,
-cookie-parser: 1.4.7,
-cors: 2.8.5,
-dotenv: 16.4.7,
-express: 4.21.2,
-jsonwebtoken: 9.0.2,
-mysql: 2.18.1,
-nodemon: 3.1.9,
-prisma: 6.4.1
+- * bcryptjs: 3.0.2,
+- * cookie-parser: 1.4.7,
+- * cors: 2.8.5,
+- * dotenv: 16.4.7,
+- * express: 4.21.2,
+- * jsonwebtoken: 9.0.2,
+- * mysql: 2.18.1,
+- * nodemon: 3.1.9,
+- * prisma: 6.4.1
 
 
 ## *Serviços usados*
