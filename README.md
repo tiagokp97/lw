@@ -10,30 +10,30 @@ Este é o frontend do **Painel de Conta Bancária**, um sistema bancário simple
 # *Tecnologias Utilizadas*
 O projeto foi desenvolvido com as seguintes tecnologias:
 
-- * Framework:** [Next.js](https://nextjs.org/) (App Router)  
-- * Gerenciamento de Estado:** [Redux Toolkit](https://redux-toolkit.js.org/)  
-- * Requisições Assíncronas:** [React Query (@tanstack/react-query)](https://tanstack.com/query/latest)  
-- * Requisições HTTP:** [Axios](https://axios-http.com/)  
-- * Validação de Formulários:** [React Hook Form](https://react-hook-form.com/)  
-- * Notificações:** [React Hot Toast](https://react-hot-toast.com/)  
-- * Gráficos:** [Recharts](https://recharts.org/)  
-- * Autenticação:** JWT armazenado em **cookies**  
-- * Estilização:** [TailwindCSS](https://tailwindcss.com/)  
-- * Linter:** [ESLint](https://eslint.org/)  
-- * Linguagem:** Js  
+- Framework [Next.js](https://nextjs.org/) (App Router)  
+-  Gerenciamento de Estado: [Redux Toolkit](https://redux-toolkit.js.org/)  
+-  Requisições Assíncronas: [React Query (@tanstack/react-query)](https://tanstack.com/query/latest)  
+-  Requisições HTTP: [Axios](https://axios-http.com/)  
+-  Validação de Formulários: [React Hook Form](https://react-hook-form.com/)  
+-  Notificações: [React Hot Toast](https://react-hot-toast.com/)  
+-  Gráficos: [Recharts](https://recharts.org/)  
+-  Autenticação: JWT armazenado em **cookies**  
+-  Estilização: [TailwindCSS](https://tailwindcss.com/)  
+-  Linter: [ESLint](https://eslint.org/)  
+-  Linguagem: Js  
 
 
 # Tecnologias usadas no backend.
 
-bcryptjs: 3.0.2,
-cookie-parser: 1.4.7,
-cors: 2.8.5,
-dotenv: 16.4.7,
-express: 4.21.2,
-jsonwebtoken: 9.0.2,
-mysql: 2.18.1,
-nodemon: 3.1.9,
-prisma: 6.4.1
+-  bcryptjs: 3.0.2,
+-  cookie-parser: 1.4.7,
+-  cors: 2.8.5,
+-  dotenv: 16.4.7,
+-  express: 4.21.2,
+-  jsonwebtoken: 9.0.2,
+-  mysql: 2.18.1,
+-  nodemon: 3.1.9,
+-  prisma: 6.4.1
 
 
 ## *Serviços usados*
