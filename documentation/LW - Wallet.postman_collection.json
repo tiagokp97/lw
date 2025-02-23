@@ -1,0 +1,1510 @@
+{
+	"info": {
+		"_postman_id": "d96ca052-8055-4770-88e2-754796bfe3d2",
+		"name": "LW - Wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30367643",
+		"_collection_link": "https://www.postman.com/winter-escape-115766/workspace/lw/collection/30367643-d96ca052-8055-4770-88e2-754796bfe3d2?action=share&source=collection_link&creator=30367643"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"teste\", \"password\": \"123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login Successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\": \"teste\", \"password\": \"123456\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token={{vault:json-web-token}}; Max-Age=3600; Path=/; Expires=Sun, 23 Feb 2025 21:43:00 GMT; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-DOWvfMhj05v4eN+mg6AlHJrIPp8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 20:43:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successful\"\n}"
+						},
+						{
+							"name": "User not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\": \"tese\", \"password\": \"123456\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a-hq/hT0ORGTkTfyRpVCZ/JB/r8Eg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 20:43:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"User not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"teste\", \"password\": \"123456\", \"amount\": 500}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Username already exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\": \"teste\", \"password\": \"123456\", \"amount\": 500}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/apiauth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"apiauth",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23-T8MAkPyiwfq0p1FbgOLvpuzEOlQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 20:42:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Username already exists\"\n}"
+						},
+						{
+							"name": "Register Succesful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\": \"teste12344\", \"password\": \"123456\", \"amount\": 500}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}auth/register",
+									"host": [
+										"{{base_url}}auth"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "320"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"140-fheM18IDCynNo6rmordFwBlgAdU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 20:44:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": 8,\n        \"username\": \"teste12344\",\n        \"password\": \"$2b$10$XIGRCOoWARmN02A3btoFfu8S61pnwTvBfmOgIjBz4QQAUEqNi5zTu\",\n        \"createdAt\": \"2025-02-23T20:44:48.549Z\",\n        \"updatedAt\": \"2025-02-23T20:44:48.549Z\"\n    },\n    \"account\": {\n        \"id\": 6613,\n        \"userId\": 8,\n        \"balance\": \"500\",\n        \"createdAt\": \"2025-02-23T20:44:48.555Z\",\n        \"updatedAt\": \"2025-02-23T20:44:48.555Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "Using cookies from the login to authenticate the routes"
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Deposit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"amount\": 100, \"id\": 1037}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/transaction/deposit",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction",
+								"deposit"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": [
+						{
+							"name": "Account not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"amount\": 100, \"id\": 123}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/transaction/deposit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"transaction",
+										"deposit"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-aIj+H2OlTc9IcyGo/9fHu1m4gIg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 20:57:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Account not found\"\n}"
+						},
+						{
+							"name": "Deposit Successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"amount\": 100, \"id\": 1037}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/transaction/deposit",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transaction",
+										"deposit"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-96Y4872Iahu653WeAdT61vcolbk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 21:00:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deposit of R$ 100 successful!\",\n    \"balance\": \"975\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Balance",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/transaction/balance",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction",
+								"balance"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": [
+						{
+							"name": "Balance Successful",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/transaction/balance",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"transaction",
+										"balance"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1447"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5a7-490eBC0v4fglP/XwIFeD8BES6fI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 21:10:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"accounts\": [\n        {\n            \"id\": 1037,\n            \"balance\": \"1175\"\n        },\n        {\n            \"id\": 1171,\n            \"balance\": \"12070\"\n        },\n        {\n            \"id\": 1405,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 1679,\n            \"balance\": \"471\"\n        },\n        {\n            \"id\": 1733,\n            \"balance\": \"168\"\n        },\n        {\n            \"id\": 1759,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 1856,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 1979,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 2122,\n            \"balance\": \"350\"\n        },\n        {\n            \"id\": 2454,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 2460,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 2895,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 2972,\n            \"balance\": \"215\"\n        },\n        {\n            \"id\": 3076,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 3696,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 3906,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 3964,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 4261,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 4548,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 4655,\n            \"balance\": \"350\"\n        },\n        {\n            \"id\": 4816,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 4886,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 5052,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 5208,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 5388,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 5478,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 5883,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 5894,\n            \"balance\": \"100\"\n        },\n        {\n            \"id\": 5920,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 6019,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 6416,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 6600,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 6701,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 6773,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 7344,\n            \"balance\": \"8250\"\n        },\n        {\n            \"id\": 7564,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 7579,\n            \"balance\": \"400\"\n        },\n        {\n            \"id\": 7771,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 7947,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 7948,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 8358,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 8402,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 9006,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 9048,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 9194,\n            \"balance\": \"97369\"\n        },\n        {\n            \"id\": 9324,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 9333,\n            \"balance\": \"0\"\n        },\n        {\n            \"id\": 9450,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 9462,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 9634,\n            \"balance\": \"128\"\n        },\n        {\n            \"id\": 9889,\n            \"balance\": \"1800\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/transaction/?id=2972&month=2&year=2025&type=in",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2972"
+								},
+								{
+									"key": "month",
+									"value": "2"
+								},
+								{
+									"key": "year",
+									"value": "2025"
+								},
+								{
+									"key": "type",
+									"value": "in"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Type out",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/transaction/?id=2972&month=2&year=2025&type=out",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"transaction",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2972"
+										},
+										{
+											"key": "month",
+											"value": "2"
+										},
+										{
+											"key": "year",
+											"value": "2025"
+										},
+										{
+											"key": "type",
+											"value": "out"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "103"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"67-AoVIuVNk2TTtGoC+vZewpACxgts\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 21:12:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"transactions\": [\n        {\n            \"id\": 58,\n            \"type\": \"transfer_out\",\n            \"amount\": \"40\",\n            \"createdAt\": \"2025-02-23T17:19:14.812Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Type in",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/transaction/?id=2972&month=2&year=2025&type=in",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transaction",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2972"
+										},
+										{
+											"key": "month",
+											"value": "2"
+										},
+										{
+											"key": "year",
+											"value": "2025"
+										},
+										{
+											"key": "type",
+											"value": "in"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "504"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f8-DtINrAjC9vtdkMfu6zHkQFyLUII\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 21:12:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"transactions\": [\n        {\n            \"id\": 38,\n            \"type\": \"deposit\",\n            \"amount\": \"30\",\n            \"createdAt\": \"2025-02-23T14:08:53.182Z\"\n        },\n        {\n            \"id\": 12,\n            \"type\": \"deposit\",\n            \"amount\": \"30\",\n            \"createdAt\": \"2025-02-22T20:19:52.606Z\"\n        },\n        {\n            \"id\": 11,\n            \"type\": \"deposit\",\n            \"amount\": \"30\",\n            \"createdAt\": \"2025-02-22T20:19:46.583Z\"\n        },\n        {\n            \"id\": 10,\n            \"type\": \"deposit\",\n            \"amount\": \"30\",\n            \"createdAt\": \"2025-02-22T20:19:34.052Z\"\n        },\n        {\n            \"id\": 4,\n            \"type\": \"transfer_in\",\n            \"amount\": \"15\",\n            \"createdAt\": \"2025-02-22T19:16:14.253Z\"\n        },\n        {\n            \"id\": 2,\n            \"type\": \"transfer_in\",\n            \"amount\": \"20\",\n            \"createdAt\": \"2025-02-22T19:14:46.489Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Month",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/transaction/?id=2972&month=1&year=2025&type=in",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transaction",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2972"
+										},
+										{
+											"key": "month",
+											"value": "1"
+										},
+										{
+											"key": "year",
+											"value": "2025"
+										},
+										{
+											"key": "type",
+											"value": "in"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "98"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"62-Hx6vjBRgnwm3XIk72MOV1aRZkUU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 21:12:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"transactions\": [\n        {\n            \"id\": 50,\n            \"type\": \"deposit\",\n            \"amount\": \"40\",\n            \"createdAt\": \"2025-01-22T20:19:52.606Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "No transactions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/transaction/?id=12&month=1&year=2025&type=in",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transaction",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "12"
+										},
+										{
+											"key": "month",
+											"value": "1"
+										},
+										{
+											"key": "year",
+											"value": "2025"
+										},
+										{
+											"key": "type",
+											"value": "in"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "19"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13-5kNywRczdOpS8NmkyObje2mO10I\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 21:13:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"transactions\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Transaction",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"origin\": 1171, \"destination\":2972, \"amount\": 20}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/transaction/transfer",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction",
+								"transfer"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": [
+						{
+							"name": "Transfer Successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"origin\": 1171, \"destination\":2972, \"amount\": 15}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/transaction/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"transaction",
+										"transfer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7c-LAt19FUsBdrvw7w+FEuuM/ueZK8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 21:14:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Transfer of R$ 15 successful!\",\n    \"origin\": {\n        \"id\": 1171,\n        \"balance\": \"12055\"\n    },\n    \"destination\": {\n        \"id\": 2972,\n        \"balance\": \"230\"\n    }\n}"
+						},
+						{
+							"name": "Origin Account not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"origin\": 11, \"destination\":2972, \"amount\": 15}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/transaction/transfer",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transaction",
+										"transfer"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24-iLhZJD/bnwCOSOwHR2F+T9xiCQA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 21:14:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Origin account not found\"\n}"
+						},
+						{
+							"name": "Destination Account not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"origin\": 1171, \"destination\":1, \"amount\": 15}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/transaction/transfer",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transaction",
+										"transfer"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-YTIv1L8lArk7Nro3zyApffagHXI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 21:15:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Destination account not found\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"amount\": 400}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}account/create",
+							"host": [
+								"{{base_url}}account"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Account created successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/apiaccount/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"apiaccount",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"72-MXRW6IIv/QoiFINf+BLmTli/Oj8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 20:46:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9333,\n    \"userId\": 1,\n    \"balance\": \"0\",\n    \"createdAt\": \"2025-02-23T20:46:30.835Z\",\n    \"updatedAt\": \"2025-02-23T20:46:30.835Z\"\n}"
+						},
+						{
+							"name": "Account created with amount",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"amount\": 400}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}account/create",
+									"host": [
+										"{{base_url}}account"
+									],
+									"path": [
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "116"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"74-Uxf+Z3h5nNyJfU0TZEvGNrYByHU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 20:47:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7579,\n    \"userId\": 1,\n    \"balance\": \"400\",\n    \"createdAt\": \"2025-02-23T20:47:08.304Z\",\n    \"updatedAt\": \"2025-02-23T20:47:08.304Z\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3001/api"
+		}
+	]
+}
