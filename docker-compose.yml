@@ -29,5 +29,10 @@ services:
       - ./backend:/app
     command: ["sh", "-c", "npx prisma migrate deploy && npm run dev"]
 
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+
 volumes:
   db_data:

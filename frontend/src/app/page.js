@@ -1,3 +1,5 @@
+'use client';
+import { useAuth } from './hooks/useAuth';
 import BalanceComponent from './components/BalanceComponent';
 import DepositComponent from './components/DepositComponent';
 import TransferComponent from './components/TransferComponent';
@@ -11,6 +13,16 @@ import Wallet from './components/icons/Wallet';
 import ThemeToggle from './components/ThemeToggle';
 
 export default function Home() {
+  const { isAuthenticated } = useAuth();
+  console.log('isAuthenticated', isAuthenticated);
+  if (isAuthenticated === null) {
+    return (
+      <div className='h-screen flex items-center justify-center text-white'>
+        Checking authentication...
+      </div>
+    );
+  }
+
   return (
     <div className='min-h-screen grid grid-rows-[auto,1fr,auto] dark:bg-primary-dark bg-gray-900'>
       <header className=' text-white pl-5 pt-4 h-20 relative flex justify-between pr-5 items-center'>
