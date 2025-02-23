@@ -1,0 +1,37 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  username  String    @unique
+  password  String
+  accounts  Account[] // 🔥 Um usuário pode ter várias contas
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Account {
+  id          Int         @id @unique  // 🔥 Agora `id` é um número inteiro
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      Int
+  balance     Decimal     @default(0.00)
+  transactions Transaction[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model Transaction {
+  id          Int         @id @default(autoincrement())
+  type        String
+  amount      Decimal
+  account     Account     @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  accountId   Int         // 🔥 Chave estrangeira deve ser `Int`
+  createdAt   DateTime    @default(now())
+}
