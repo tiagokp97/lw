@@ -11,16 +11,16 @@ Este é o frontend do **Painel de Conta Bancária**, um sistema bancário simple
 O projeto foi desenvolvido com as seguintes tecnologias:
 
 - Framework [Next.js](https://nextjs.org/) (App Router)  
--  Gerenciamento de Estado:** [Redux Toolkit](https://redux-toolkit.js.org/)  
--  Requisições Assíncronas:** [React Query (@tanstack/react-query)](https://tanstack.com/query/latest)  
--  Requisições HTTP:** [Axios](https://axios-http.com/)  
--  Validação de Formulários:** [React Hook Form](https://react-hook-form.com/)  
--  Notificações:** [React Hot Toast](https://react-hot-toast.com/)  
--  Gráficos:** [Recharts](https://recharts.org/)  
--  Autenticação:** JWT armazenado em **cookies**  
--  Estilização:** [TailwindCSS](https://tailwindcss.com/)  
--  Linter:** [ESLint](https://eslint.org/)  
--  Linguagem:** Js  
+-  Gerenciamento de Estado: [Redux Toolkit](https://redux-toolkit.js.org/)  
+-  Requisições Assíncronas: [React Query (@tanstack/react-query)](https://tanstack.com/query/latest)  
+-  Requisições HTTP: [Axios](https://axios-http.com/)  
+-  Validação de Formulários: [React Hook Form](https://react-hook-form.com/)  
+-  Notificações: [React Hot Toast](https://react-hot-toast.com/)  
+-  Gráficos: [Recharts](https://recharts.org/)  
+-  Autenticação: JWT armazenado em **cookies**  
+-  Estilização: [TailwindCSS](https://tailwindcss.com/)  
+-  Linter: [ESLint](https://eslint.org/)  
+-  Linguagem: Js  
 
 
 # Tecnologias usadas no backend.
