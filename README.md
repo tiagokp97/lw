@@ -74,13 +74,16 @@ Isso irá iniciar todos os containers e serviços necessários para o funcioname
 
 
 ###  Principais Funcionalidades da Aplicação
-✔️ Login & Logout
-✔️ Criação de novas contas
-✔️ Consulta de Saldo
-✔️ Transferência entre contas
-✔️ Saque
-✔️ Suporte a Multi-Contas
-✔️ Dark Mode 
+- Login & Logout
+- Criação de novas contas
+- Consulta de Saldo
+- Transferência entre contas
+- Saque
+- Suporte a Multi-Contas
+- Dark Mode
+- sessão de 1 hora
+- middleware no frontend que desloga qnd a sessão expira
+- middleware de erros no backend
 
 ### Documentação
 
